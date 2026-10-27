@@ -55,9 +55,9 @@ jobs:
         run: |
           v=$(tr -d '[:space:]' < banner-proton/VERSION)
           echo "version=$v" >> "$GITHUB_OUTPUT"
-          echo "build_name=DroidDeck-Proton-$v-aarch64" >> "$GITHUB_OUTPUT"
-          echo "display_name=DroidDeck-Proton $v" >> "$GITHUB_OUTPUT"
-          echo "Building DroidDeck-Proton $v from $GITHUB_SHA"
+          echo "build_name=DDProton-dw-$v-aarch64" >> "$GITHUB_OUTPUT"
+          echo "display_name=DDProton-dw $v" >> "$GITHUB_OUTPUT"
+          echo "Building DDProton-dw $v from $GITHUB_SHA"
       - id: k
         run: |
           keys=$(banner-proton/ci.sh keys)

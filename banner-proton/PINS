@@ -7,8 +7,8 @@ VALVE_WINE_COMMIT=c53678ab22a85f0fad3588dd34f0452a463bd015
 CACHYOS_RELEASE=cachyos-11.0-20261015-slr
 CACHYOS_WINE_BRANCH=cachyos_11.0_20261014/main
 CACHYOS_WINE_COMMIT=cd14106e4fc0f96006005b07985e49cc1517e9c0
-WINE_REPO=https://github.com/The412Banner/proton-wine
-WINE_BRANCH=banner-proton/11.11
+WINE_REPO=https://github.com/slowtrip/proton-wine
+WINE_BRANCH=dw-port
 WINE_TIER_TAGS="bp-11.11-tier1 bp-11.11-tier2 bp-11.11-tier3 bp-11.11-tier4 bp-11.11-tier5 bp-11.11-tier6 bp-11.11-tier7"
 # Wine patches GE added after tier 2 was made, committed on top of the branch (tags, in order).
 # verify-tier2.sh expects a fresh run of GE's wine section to equal tier 2 plus these.
@@ -19,7 +19,8 @@ DXVK_COMMIT=2cb40186c43d617b5bd349a3756721aa4bd24b6d
 # FEX: GE-Proton11-11's pin 741e146f (FEX-2610-30), unchanged since 11-10.
 STEAMRT_IMAGE=registry.gitlab.steamos.cloud/proton/steamrt4/sdk/arm64-llvm:4.0.20260714.251823-0
 # The wineserver protocol (protocol.def and its generated headers) must equal this commit's.
-WINE_PROTOCOL_BASE=5130c2882671e75841caa26288669ac5ae14c9b7
+# dw build: the dwproton ports add wineserver requests (protocol 939), so the base is the ported head.
+WINE_PROTOCOL_BASE=0431d72e0a1fb5007a5e3157e67c04e34f2fcb9f
 # Tier 5: DroidDeck's esync patch (repository, path @ commit).
 DROIDDECK_ESYNC_PATCH="Droid-Deck/DroidDeck-Components droiddeck-esync/patches/valve-11/0001-droiddeck-esync.patch@780ab619de"
 # Tier 6: Arihany's SD card (noexec, force_anon) and drive-root copy fixes, from proton-wine proton_11.0.
